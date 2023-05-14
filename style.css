@@ -1,0 +1,141 @@
+
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: rgb(241, 245, 248);
+  color: rgb(92, 59, 3);
+  line-height: 1.6;
+  font-size: 16px;
+
+
+  
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+img:not(.logo) {
+  width: 100%;
+}
+img {
+  display: block;
+}
+
+ 
+
+
+.sidebar-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: rgb(89, 46, 46);
+  transition: all 0.4s linear;
+  cursor: pointer;
+  animation: bounce 2s ease-in-out infinite;
+}
+.sidebar-toggle:hover {
+  color: rgb(130, 73, 73);
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.4rem;
+}
+.close-btn {
+  font-size: 1.75rem;
+  background: transparent;
+  border-color: transparent;
+  color:rgb(89, 46, 46);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: rgb(89, 46, 46);
+  transform: rotate(380deg);
+}
+.logo {
+  justify-self: center;
+  height: 45px;
+
+
+}
+
+.links a {
+  display: block;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  padding: 1rem 1.5rem;
+  color: var(--clr-grey-5);
+  transition: var(--transition);
+}
+.links a:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding-left: 1.75rem;
+}
+.social-icons {
+  justify-self: center;
+  display: flex;
+  padding-bottom: 3rem;
+}
+.social-icons a {
+  font-size: 1.5rem;
+  margin: 0 0.6rem;
+  color: rgb(89, 46, 46);
+  transition: all 0.3s;
+}
+.social-icons a:hover {
+  color: rgb(130, 73, 73);
+}
+
+.sidebar {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(178, 176, 176);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  box-shadow: rgb(89, 46, 46);
+  transition: all 0.4s linear;
+  transform: translate(-100%);
+}
+.show-sidebar {
+  transform: translate(0);
+}
+
+@media screen and (min-width: 900px) {
+  .sidebar {
+    width: 410px;
+  }
+}
